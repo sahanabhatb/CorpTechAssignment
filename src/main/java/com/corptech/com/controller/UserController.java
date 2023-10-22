@@ -26,7 +26,6 @@ public class UserController {
 	UserRepository userRepository;
 	
 	 	@PostMapping("/signup")
-		@PreAuthorize("hasRole('ADMIN')")
 	    @ApiOperation(value = "Login", response = String.class)
 	    public Boolean create(@RequestBody Map<String, String> body) throws NoSuchAlgorithmException {
 	        String username = body.get("username");
